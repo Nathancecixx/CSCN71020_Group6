@@ -3,7 +3,7 @@
 #define TRIANGLE_H
 
 // Function to check if three sides form a triangle
-int isTriangle (float side1, float side2, float side3);
+
 
 // Function to calculate the three interior angles of a triangle
 void calculateAngles(float side1, float side2, float side3, float* angleA, float* angleB, float* angleC);

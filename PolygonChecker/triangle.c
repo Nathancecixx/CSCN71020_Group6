@@ -2,7 +2,7 @@
 #include <math.h>
 #include "triangle.h"
 #include <stdbool.h>
-
+#define CRT_SECURE_NO_WARNINGS
 
 bool isTriangle(float side1, float side2, float side3) {
     // Check if any of the sides is less than 0
@@ -24,9 +24,10 @@ void calculateAngles(float side1, float side2, float side3, float* angleA, float
     float s = (side1 + side2 + side3) / 2;
 
     // Calculate the three interior angles using the Law of Cosines
-    *angleA = acos((side2 * side2 + side3 * side3 - side1 * side1) / (2 * side2 * side3));
-    *angleB = acos((side1 * side1 + side3 * side3 - side2 * side2) / (2 * side1 * side3));
-    *angleC = acos((side1 * side1 + side2 * side2 - side3 * side3) / (2 * side1 * side2));
+    *angleA = acosf((float)(side2 * side2 + side3 * side3 - side1 * side1) / (2 * (float)side2 * (float)side3));
+    *angleB = acosf((float)(side1 * side1 + side3 * side3 - side2 * side2) / (2 * (float)side1 * (float)side3));
+    *angleC = acosf((float)(side1 * side1 + side2 * side2 - side3 * side3) / (2 * (float)side1 * (float)side2));
+
 }
 
 bool isTriangleValid(float side1, float side2, float side3) {
