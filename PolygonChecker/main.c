@@ -3,6 +3,7 @@
 
 #include "main.h"
 #include "triangleSolver.h"
+#include "triangle.h"
 
 int side = 0;
 
