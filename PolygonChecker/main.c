@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
-
+#define _CRT_SECURE_NO_WARNINGS
 #include"main.h"
 #include"triangle.h"
 #include"triangleSolver.h"
@@ -35,7 +35,7 @@ char* analyzeTriangle(float side1, float side2, float side3) {
     calculateAngles(side1, side2, side3, &angleA, &angleB, &angleC);
 
     char* result = malloc(256);
-    sprintf(result, "The triangle is valid. The angles are:\n* Angle A: %.2f degrees\n* Angle B: %.2f degrees\n* Angle C: %.2f degrees", angleA, angleB, angleC);
+    sprintf_s (result, "The triangle is valid. The angles are:\n* Angle A: %.2f degrees\n* Angle B: %.2f degrees\n* Angle C: %.2f degrees", angleA, angleB, angleC);
     return result;
 }
 
@@ -53,7 +53,7 @@ int printShapeMenu() {
 
     int shapeChoice;
     printf("Enter number: ");
-    scanf("%d", &shapeChoice);
+    scanf_s("%d", &shapeChoice);
 
     return shapeChoice;
 }
@@ -70,7 +70,7 @@ int main() {
             printf("Triangle selected.\n");
             float triangleSides[3] = { 0 };
             printf("Enter the three sides of the triangle: ");
-            scanf("%f %f %f", &triangleSides[0], &triangleSides[1], &triangleSides[2]);
+            scanf_s("%f %f %f", &triangleSides[0], &triangleSides[1], &triangleSides[2]);
 
             char* result = analyzeTriangle(triangleSides[0], triangleSides[1], triangleSides[2]);
 
