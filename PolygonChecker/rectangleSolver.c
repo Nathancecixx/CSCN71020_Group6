@@ -11,12 +11,10 @@ bool is_Recatngle(POINT* arrOfPoint) {
 	}
 
 	if (!is_Orthoginal(arrOfPoint[1], arrOfPoint[2], arrOfPoint[3])) {
-		//fprintf(stderr, "ERROR2: Problem with angle at X: %d   Y:%d", arrOfPoint[2].x, arrOfPoint[2].y);
 		return false;
 	}
 
 	if (!is_Orthoginal(arrOfPoint[2], arrOfPoint[3], arrOfPoint[0])) {
-		//fprintf(stderr, "ERROR3: Problem with angle at X: %d   Y:%d", arrOfPoint[3].x, arrOfPoint[3].y);
 		return false;
 	}
 
@@ -29,7 +27,6 @@ bool is_Recatngle(POINT* arrOfPoint) {
 	//If opposite side lengths arent the same, or if all the side length are the same,
 	//then the points do not form a rectangle. return false.
 	if (RightSideL != LeftSideL || TopSideL != BottomSideL || RightSideL == TopSideL) {
-		fprintf(stderr, "ERROR: problem with sidelengths");
 		return false;
 	}
 
