@@ -4,7 +4,7 @@
 
 #include "main.h"
 
-int main() {
+int main() { 
 	bool continueProgram = true;
 	while (continueProgram) {
 		printWelcome();
