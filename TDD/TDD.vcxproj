@@ -100,7 +100,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>main.obj</AdditionalDependencies>
+      <AdditionalDependencies>main.obj;triangleSolver.obj;rectangleSolver.obj</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Users\navjo\source\repos\CSCN71020_Group6\PolygonChecker\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -167,12 +167,12 @@
     <ClCompile Include="TDD.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pch.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\PolygonChecker\PolygonChecker.vcxproj">
       <Project>{2328fae1-a1bf-420f-9f0c-c7ccc7f13314}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
